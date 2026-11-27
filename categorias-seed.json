@@ -1,0 +1,1178 @@
+[
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "CRÉDITO HABITAÇÃO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "CRÉDITO SEGUROS",
+  "reporting_group": "SEGUROS",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "SEGUROS",
+  "reporting_group": "SEGUROS",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "IMI",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "CONDOMINIO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "AGUA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "ELETRICIDADE",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "TELCO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "DECORAÇÃO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "ELETRONICA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "OBRAS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "JARDINAGEM",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "ELETRODOMESTICOS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "LIMPEZA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA DOS GATOS",
+  "categoria": "AMORTIZAÇÃO DE CRÉDITO HAB.",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "CRÉDITO HABITAÇÃO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "CRÉDITO SEGUROS",
+  "reporting_group": "SEGUROS",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "SEGUROS",
+  "reporting_group": "SEGUROS",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "IMI",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "CONDOMINIO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "AGUA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "ELETRICIDADE",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "TELCO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "DECORAÇÃO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "ELETRONICA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "OBRAS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "JARDINAGEM",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "ELETRODOMESTICOS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "LIMPEZA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "AMORTIZAÇÃO DE CRÉDITO HAB.",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "QASHQAI",
+  "categoria": "COMBUSTIVEL",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "QASHQAI",
+  "categoria": "MANUTENÇÃO/ ASSISTENCIA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "QASHQAI",
+  "categoria": "IUC",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "QASHQAI",
+  "categoria": "SEGURO",
+  "reporting_group": "SEGUROS",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "QASHQAI",
+  "categoria": "LIMPEZA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "QASHQAI",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "QASHQAI",
+  "categoria": "ACESSORIOS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "QASHQAI",
+  "categoria": "ESTACIONAMENTO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "FREELANDER",
+  "categoria": "COMBUSTIVEL",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "FREELANDER",
+  "categoria": "MANUTENÇÃO/ ASSISTENCIA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "FREELANDER",
+  "categoria": "IUC",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "FREELANDER",
+  "categoria": "SEGURO",
+  "reporting_group": "SEGUROS",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "FREELANDER",
+  "categoria": "LIMPEZA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "FREELANDER",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "FREELANDER",
+  "categoria": "ACESSORIOS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "FREELANDER",
+  "categoria": "ESTACIONAMENTO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "TENERE700",
+  "categoria": "COMBUSTIVEL",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "TENERE700",
+  "categoria": "MANUTENÇÃO/ ASSISTENCIA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "TENERE700",
+  "categoria": "IUC",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "TENERE700",
+  "categoria": "SEGURO",
+  "reporting_group": "SEGUROS",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "TENERE700",
+  "categoria": "LIMPEZA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "TENERE700",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "VEICULOS",
+  "micro": "TENERE700",
+  "categoria": "ACESSORIOS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "ALIMENTAR",
+  "micro": "REFEIÇÕES",
+  "categoria": "REFEIÇÕES",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "ALIMENTAR",
+  "micro": "REFEIÇÕES",
+  "categoria": "REFEIÇÕES TRABALHO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "ALIMENTAR",
+  "micro": "REFEIÇÕES",
+  "categoria": "REFEIÇÕES FÉRIAS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. ENTRETENIMENTO",
+  "categoria": "NETFLIX",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. ENTRETENIMENTO",
+  "categoria": "AMAZON PRIME",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. ENTRETENIMENTO",
+  "categoria": "HBO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. ENTRETENIMENTO",
+  "categoria": "PLAYSTATION PLUS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. ENTRETENIMENTO",
+  "categoria": "ACP",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. ENTRETENIMENTO",
+  "categoria": "FPM",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. APPS",
+  "categoria": "SPLIT WISE",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. APPS",
+  "categoria": "FINANÇAS PESSOAIS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. APPS",
+  "categoria": "GOOGLE CLOUD",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. APPS",
+  "categoria": "REVOLLUT",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. SERV. TRANSPORTE",
+  "categoria": "VIA VERDE",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. SERV. TRANSPORTE",
+  "categoria": "VIA CARD",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. SERV. TRANSPORTE",
+  "categoria": "PORTAGENS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUBSCRIÇÕES",
+  "micro": "SUBS. SERV. SAÚDE",
+  "categoria": "MÉDIS/MULTICARE OTHERS",
+  "reporting_group": "SEGUROS",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "TENIS",
+  "categoria": "MENSALIDADE",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "TENIS",
+  "categoria": "EQUIPAMENTO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "TENIS",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "MOTOCROSS",
+  "categoria": "MENSALIDADE",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "MOTOCROSS",
+  "categoria": "EQUIPAMENTO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "MOTOCROSS",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "ESCALADA",
+  "categoria": "MENSALIDADE",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "ESCALADA",
+  "categoria": "EQUIPAMENTO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "ESCALADA",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "RUNNING",
+  "categoria": "MENSALIDADE",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "RUNNING",
+  "categoria": "EQUIPAMENTO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPORTO",
+  "micro": "RUNNING",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "RITA",
+  "categoria": "VESTUARIO CASUAL",
+  "reporting_group": "",
+  "grupo_custo": "Rita"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "RITA",
+  "categoria": "VESTUARIO TRABALHO",
+  "reporting_group": "",
+  "grupo_custo": "Rita"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "RITA",
+  "categoria": "VESTUARIO DESPORTO",
+  "reporting_group": "",
+  "grupo_custo": "Rita"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "JOAO",
+  "categoria": "VESTUARIO CASUAL",
+  "reporting_group": "",
+  "grupo_custo": "João"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "JOAO",
+  "categoria": "VESTUARIO TRABALHO",
+  "reporting_group": "",
+  "grupo_custo": "João"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "JOAO",
+  "categoria": "VESTUARIO DESPORTO",
+  "reporting_group": "",
+  "grupo_custo": "João"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "ESTÉTICA",
+  "categoria": "BARBEIRO/ CABELEIREIRO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "ESTÉTICA",
+  "categoria": "DEPILAÇÃO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "ESTÉTICA",
+  "categoria": "MANICUR",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "DESPESAS PESSOAIS",
+  "micro": "ESTÉTICA",
+  "categoria": "COSMÉTICA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "RITA",
+  "categoria": "CONSULTA MÉDICA DE URGENCIA",
+  "reporting_group": "",
+  "grupo_custo": "Rita"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "RITA",
+  "categoria": "CONSULTA MÉDICA ROTINA",
+  "reporting_group": "",
+  "grupo_custo": "Rita"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "RITA",
+  "categoria": "FARMACIA",
+  "reporting_group": "",
+  "grupo_custo": "Rita"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "RITA",
+  "categoria": "MEDICINA DESPORTIVA/ FISIO",
+  "reporting_group": "",
+  "grupo_custo": "Rita"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "RITA",
+  "categoria": "GINASIO",
+  "reporting_group": "",
+  "grupo_custo": "Rita"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "JOAO",
+  "categoria": "CONSULTA MÉDICA DE URGENCIA",
+  "reporting_group": "",
+  "grupo_custo": "João"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "JOAO",
+  "categoria": "CONSULTA MÉDICA ROTINA",
+  "reporting_group": "",
+  "grupo_custo": "João"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "JOAO",
+  "categoria": "FARMACIA",
+  "reporting_group": "",
+  "grupo_custo": "João"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "JOAO",
+  "categoria": "MEDICINA DESPORTIVA/ FISIO",
+  "reporting_group": "",
+  "grupo_custo": "João"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "JOAO",
+  "categoria": "GINASIO",
+  "reporting_group": "",
+  "grupo_custo": "João"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "FRANCISCA",
+  "categoria": "CONSULTA MÉDICA DE URGENCIA",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "FRANCISCA",
+  "categoria": "CONSULTA MÉDICA ROTINA",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "FRANCISCA",
+  "categoria": "FARMACIA",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SAÚDE",
+  "micro": "FRANCISCA",
+  "categoria": "MEDICINA DESPORTIVA/ FISIO",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "DESPESAS ESCOLARES & OTHERS",
+  "categoria": "COLÉGIO",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "DESPESAS ESCOLARES & OTHERS",
+  "categoria": "ATIVIDADES LETIVAS",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "ATIVIDADES",
+  "categoria": "TENIS",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "ATIVIDADES",
+  "categoria": "PISCINA",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "ATIVIDADES",
+  "categoria": "BALLET",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "ATIVIDADES",
+  "categoria": "OTHERS",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "VESTUARIO",
+  "categoria": "VESTUARIO CASUAL",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "VESTUARIO",
+  "categoria": "VESTUARIO TRABALHO",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "VESTUARIO",
+  "categoria": "VESTUARIO DESPORTO",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "KIKA",
+  "micro": "ATIVIDADES",
+  "categoria": "BABYSITTER",
+  "reporting_group": "",
+  "grupo_custo": "Kika"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "BANK",
+  "micro": "DESPESAS E COMISSÕES",
+  "categoria": "DESPESAS DE MANUTENÇÃO DE CONTA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "BANK",
+  "micro": "DESPESAS E COMISSÕES",
+  "categoria": "SEGUROS",
+  "reporting_group": "SEGUROS",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "BANK",
+  "micro": "DESPESAS E COMISSÕES",
+  "categoria": "AMORTIZAÇÃO DE CRÉDITOS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "TAX",
+  "micro": "IRS",
+  "categoria": "IRS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "SUPERMERCADO",
+  "micro": "SUPERMERCADO",
+  "categoria": "SUPERMERCADO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "FERIAS",
+  "micro": "FERIAS",
+  "categoria": "HOTEL",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "FERIAS",
+  "micro": "FERIAS",
+  "categoria": "ALUGUER",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "FERIAS",
+  "micro": "FERIAS",
+  "categoria": "TRANSPORTES",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "FERIAS",
+  "micro": "FERIAS",
+  "categoria": "REFEIÇÕES",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "FERIAS",
+  "micro": "FERIAS",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "TRADE",
+  "micro": "TRADE",
+  "categoria": "PERDAS FINANCEIRAS MERCADO BOLSISTA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "TRADE",
+  "micro": "TRADE",
+  "categoria": "GANHOS FINANCEIROS MERCADO BOLSISTA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "INVESTIMENTOS",
+  "micro": "FERRAMENTAS",
+  "categoria": "FERRAMENTAS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "EXPENSE",
+  "macro": "INVESTIMENTOS",
+  "micro": "FERRAMENTAS",
+  "categoria": "CONSUMIVEIS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "SALARIO",
+  "micro": "SALARIO",
+  "categoria": "BASE",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "SALARIO",
+  "micro": "SALARIO",
+  "categoria": "SUB.REF.",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "SALARIO",
+  "micro": "SALARIO",
+  "categoria": "PRÉMIO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "SALARIO",
+  "micro": "SALARIO",
+  "categoria": "INC.DESLOCAÇÃO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "SALARIO",
+  "micro": "SALARIO",
+  "categoria": "PPR",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "MESADA",
+  "micro": "MESADA",
+  "categoria": "MESADA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "MESADA",
+  "micro": "MESADA",
+  "categoria": "MESADA EXTRA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "ESTADO",
+  "micro": "ESTADO",
+  "categoria": "SEGURANÇA SOCIAL",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "ESTADO",
+  "micro": "ESTADO",
+  "categoria": "IRS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "ESTADO",
+  "micro": "ESTADO",
+  "categoria": "OUTROS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "CASA",
+  "micro": "CASA GIL VICENTE",
+  "categoria": "RENDA",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "OTHERS",
+  "micro": "OTHERS",
+  "categoria": "VENDAS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "OTHERS",
+  "micro": "OTHERS",
+  "categoria": "RECEBIMENTOS PONTUAIS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "OTHERS",
+  "micro": "OTHERS",
+  "categoria": "RECEBIMENTOS JOGO",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ },
+ {
+  "tipo": "INCOME",
+  "macro": "BANK",
+  "micro": "COMISSÕES",
+  "categoria": "JUROS E DERIVADOS",
+  "reporting_group": "",
+  "grupo_custo": "Família"
+ }
+]
