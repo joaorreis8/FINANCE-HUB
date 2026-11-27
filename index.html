@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-PT"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FINANCE HUB</title>
+<style>
+:root{--bg:#f4f6f9;--cd:#fff;--tx:#1a2027;--mu:#6b7684;--bd:#dfe4ea;--ac:#1f5fd6;--ok:#168a57;--bad:#d03b3b;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#12161b;--cd:#1b2027;--tx:#e7ebf0;--mu:#97a1ae;--bd:#2a313a;--ac:#6b9bff;--ok:#3ec98a;--bad:#ff7a7a;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;padding-top:env(safe-area-inset-top,0px)}
+#login{max-width:340px;margin:12vh auto;padding:20px}
+.cd{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:14px;margin-bottom:12px}
+input,select,button,textarea{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px;width:100%}
+button{cursor:pointer;width:auto}button.p{background:var(--ac);border-color:var(--ac);color:#fff}
+label{display:block;font-size:12px;color:var(--mu);margin:8px 0 3px}
+#app{display:none;min-height:100vh}
+nav{background:var(--cd);border-right:1px solid var(--bd);padding:12px;width:220px;position:fixed;top:0;bottom:0;overflow:auto}
+nav h2{font-size:16px;margin:4px 8px 14px}nav a{display:block;padding:9px 10px;border-radius:8px;color:var(--tx);cursor:pointer}
+nav a.on{background:var(--ac);color:#fff}nav a.soon{color:var(--mu)}
+main{margin-left:220px;padding:16px;max-width:900px}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+h1{font-size:21px;margin:0}.mu{color:var(--mu);font-size:13px}.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0 10px}
+table{width:100%;border-collapse:collapse}td{padding:6px 4px;border-bottom:1px solid var(--bd);font-size:14px}.r{text-align:right}.neg{color:var(--bad)}.pos{color:var(--ok)}
+@media(max-width:760px){nav{position:static;width:auto;display:flex;gap:4px;overflow-x:auto;border-right:0;border-bottom:1px solid var(--bd)}nav h2{display:none}nav a{white-space:nowrap}main{margin-left:0}}
+.rs{padding:8px;border:1px solid var(--bd);border-radius:8px;margin-top:4px;cursor:pointer}.rs:hover{background:var(--bg)}</style></head><body>
+<div id="login" class="cd"><h1>FINANCE HUB</h1><p class="mu">Entra com a tua conta.</p>
+<label>Email</label><input id="em" type="email" autocomplete="username"><label>Password</label><input id="pw" type="password" autocomplete="current-password">
+<p><button class="p" onclick="login()">Entrar</button></p><p id="err" class="neg"></p></div>
+
+<div id="app"><nav><h2>FINANCE HUB</h2>
+<a data-t="lanc" class="on">Lançamentos</a><a data-t="contas">Contas</a><a class="soon" data-t="soon">Planeamento</a><a class="soon" data-t="soon">Créditos</a><a class="soon" data-t="soon">Splitwise</a><a class="soon" data-t="soon">Dashboards</a><a data-t="cfg">Configurações</a><a onclick="auth.signOut()">Sair</a></nav>
+<main><header><h1 id="hi"></h1><span class="mu" id="dt"></span> <button onclick="auth.signOut()">Sair</button></header><div id="v"></div></main></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+firebase.initializeApp({apiKey:"AIzaSyB8ywXWEr4bhThRlf6rJQDR-VAZyCvit7g",authDomain:"finance-hub-bad38.firebaseapp.com",projectId:"finance-hub-bad38",storageBucket:"finance-hub-bad38.firebasestorage.app",messagingSenderId:"299347196500",appId:"1:299347196500:web:5bccb2f7e9ff1a696ccbc1"});
+const auth=firebase.auth(),db=firebase.firestore();db.enablePersistence({synchronizeTabs:true}).catch(()=>{});
+const WHO={W70lzdpkOPORYRtnowM4Llw5dqW2:{n:"Admin",k:"admin"},vuaJlYRq8yd8Sce9R266bemxudF2:{n:"João",k:"joao"},tXWWYekVERWfr9eskMWfSj2rTsm2:{n:"Rita",k:"rita"}};
+const $=i=>document.getElementById(i),eur=x=>x.toLocaleString("pt-PT",{style:"currency",currency:"EUR"}),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let me,cats=[],contas=[],unsub=null,tab="lanc";
+function login(){$("err").textContent="";auth.signInWithEmailAndPassword($("em").value.trim(),$("pw").value).catch(e=>$("err").textContent="Não foi possível entrar ("+e.code+")")}
+auth.onAuthStateChanged(async u=>{
+ if(!u){$("app").style.display="none";$("login").style.display="block";return}
+ me=WHO[u.uid];if(!me){await auth.signOut();$("err").textContent="Esta conta não tem acesso.";return}
+ $("login").style.display="none";$("app").style.display="block";
+ $("hi").textContent="Olá "+me.n;$("dt").textContent=new Date().toLocaleDateString("pt-PT",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+ await Promise.all([loadCats(),loadContas()]);go("contas")});
+document.querySelectorAll("nav a[data-t]").forEach(a=>a.onclick=()=>{if(a.dataset.t=="soon"){$("v").innerHTML='<div class="cd">Este separador vem nas próximas fases.</div>';return}go(a.dataset.t)});
+function go(t){tab=t;if(unsub){unsub();unsub=null}document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.dataset.t==t));({lanc:vLanc,contas:vContas,cfg:vCfg})[t]()}
+async function loadCats(){const s=await db.collection("categorias").get();cats=s.docs.map(d=>({id:d.id,...d.data()}))}
+let prefs={ordem:[]};
+async function loadContas(){const m=new Map();
+ if(me.k=="admin"){(await db.collection("contas").get()).docs.forEach(d=>m.set(d.id,{id:d.id,...d.data()}))}
+ else{for(const q of [db.collection("contas").where("dono","==",me.k),db.collection("contas").where("conjunta","==",true)])(await q.get()).docs.forEach(d=>m.set(d.id,{id:d.id,...d.data()}))}
+ contas=[...m.values()];
+ const wid="wallet_"+me.k;
+ if(!m.has(wid)){const w={nome:"Wallet",banco:"Vault",tipo:"Corrente",notas:"",dono:me.k,conjunta:false,saldoInicial:0,padrao:true};try{await db.collection("contas").doc(wid).set(w);contas.push({id:wid,...w})}catch(e){}}
+ try{const p=await db.collection("preferencias").doc(auth.currentUser.uid).get();prefs=p.exists?p.data():{ordem:[]}}catch(e){}}
+function sortContas(){const o=prefs.ordem||[];return [...contas].sort((a,b)=>{const x=o.indexOf(a.id),y=o.indexOf(b.id);if(x<0&&y<0)return a.nome.localeCompare(b.nome,"pt");return x<0?1:y<0?-1:x-y})}
+async function moveConta(id,d){const l=sortContas().map(c=>c.id),i=l.indexOf(id),j=i+d;if(j<0||j>=l.length)return;[l[i],l[j]]=[l[j],l[i]];prefs.ordem=l;await db.collection("preferencias").doc(auth.currentUser.uid).set({ordem:l},{merge:true});vContas()}
+const uniq=a=>[...new Set(a)].filter(Boolean);
+function opts(a,sel){return a.map(x=>`<option value="${esc(x.v??x)}">${esc(x.t??x)}</option>`).join("")}
+const norm=s=>String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+function defConta(){const u=prefs.uso||{};let best="",n=0;sortContas().forEach(c=>{if((u[c.id]||0)>n){n=u[c.id];best=c.id}});return best||("wallet_"+me.k)}
+function vLanc(){
+ if(!cats.length){$("v").innerHTML='<div class="cd">Ainda não há categorias. '+(me.k=="admin"?"Vai a Configurações e importa-as.":"Pede ao admin para as importar.")+"</div>";return}
+ $("v").innerHTML=`<div class="cd"><b>1. Lançamento</b><div class="g">
+ <div><label>Tipo</label><select id="tp"><option value="EXPENSE">Custo</option><option value="INCOME">Receita</option></select></div>
+ <div><label>Data</label><input id="dta" type="date" value="${new Date().toISOString().slice(0,10)}"></div>
+ <div><label>Valor (€)</label><input id="val" type="number" step="0.01" inputmode="decimal"></div>
+ <div><label>Conta a debitar / creditar</label><select id="co">${sortContas().map(c=>`<option value="${c.id}">${esc(c.nome)}</option>`).join("")}</select></div></div></div>
+ <div class="cd"><b>2. Categoria</b><label>Pesquisar (ex.: combustível)</label><input id="qc" autocomplete="off" placeholder="escreve para encontrar macro, micro ou categoria"><div id="rs"></div>
+ <div class="g"><div><label>Macro</label><select id="ma"></select></div><div id="miw"><label>Micro</label><select id="mi"></select></div><div><label>Categoria</label><select id="ca"></select></div></div></div>
+ <div class="cd"><b>3. Splitwise</b><div class="g"><div><label>Partilhado?</label><select id="sh"><option value="0">Não</option><option value="1">Sim</option></select></div></div>
+ <div class="g" id="spl" style="display:none"><div><label>% partilhada</label><input id="sp" type="number" step="0.01" value="50"></div><div><label>€ partilhados</label><input id="se" type="number" step="0.01"></div><div><label>Pago por</label><select id="pp"><option value="joao">João</option><option value="rita">Rita</option></select></div></div></div>
+ <div class="cd"><b>4. Nota</b><input id="nt" placeholder="campo aberto"><p><button class="p" onclick="save()">Guardar lançamento</button> <span id="msg" class="mu"></span></p></div>
+ <div class="cd"><b>Este mês</b><table id="lst"></table></div>`;
+ $("co").value=defConta();if(!$("co").value&&$("co").options.length)$("co").selectedIndex=0;
+ $("pp").value=me.k=="rita"?"rita":"joao";
+ const E='<option value="">— escolher —</option>',M=()=>cats.filter(c=>c.ativa!==false&&c.tipo==$("tp").value);
+ const fillMa=()=>{$("ma").innerHTML=E+opts(uniq(M().map(c=>c.macro)));fillMi()};
+ const fillMi=()=>{const ma=$("ma").value,mi=uniq(M().filter(c=>c.macro==ma).map(c=>c.micro)),hide=!!ma&&mi.length<2&&(!mi[0]||mi[0]==ma);$("mi").innerHTML=hide?"":E+opts(mi);$("miw").style.display=hide?"none":"";fillCa()};
+ const fillCa=()=>{const ma=$("ma").value,hid=$("miw").style.display=="none",mi=$("mi").value;$("ca").innerHTML=E+(ma?M().filter(c=>c.macro==ma&&(hid||!mi||c.micro==mi)).map(c=>`<option value="${c.id}">${esc(c.categoria)}</option>`).join(""):"")};
+ $("tp").onchange=fillMa;$("ma").onchange=fillMi;$("mi").onchange=fillCa;
+ $("ca").onchange=()=>{const c=cats.find(x=>x.id==$("ca").value);if(c&&$("miw").style.display!="none"&&!$("mi").value)$("mi").value=c.micro||""};
+ window.pick=id=>{const c=cats.find(x=>x.id==id);$("tp").value=c.tipo;fillMa();$("ma").value=c.macro;fillMi();if($("miw").style.display!="none")$("mi").value=c.micro||"";fillCa();$("ca").value=id;$("rs").innerHTML="";$("qc").value=""};
+ $("qc").oninput=()=>{const t=norm($("qc").value).split(" ").filter(Boolean);if(!t.join("").length||t.join("").length<2){$("rs").innerHTML="";return}
+  const r=cats.filter(c=>c.ativa!==false&&t.every(w=>norm(c.macro+" "+(c.micro||"")+" "+c.categoria).includes(w))).slice(0,12);
+  $("rs").innerHTML=r.map(c=>`<div class="rs" onclick="pick('${c.id}')">${esc(c.categoria)}<span class="mu"> — ${esc(c.macro)}${c.micro&&c.micro!=c.macro?" › "+esc(c.micro):""}${c.tipo=="INCOME"?" · receita":""}</span></div>`).join("")||'<div class="mu">Sem resultados.</div>'};
+ const v=()=>+$("val").value||0,fromPct=()=>{$("se").value=(v()*(+$("sp").value||0)/100).toFixed(2)},fromEur=()=>{$("sp").value=v()>0?Math.round((+$("se").value||0)/v()*10000)/100:0};
+ $("sp").oninput=fromPct;$("se").oninput=fromEur;$("val").oninput=()=>{if($("sh").value=="1")fromPct()};
+ $("sh").onchange=()=>{const on=$("sh").value=="1";$("spl").style.display=on?"":"none";if(on){$("sp").value=50;fromPct()}};
+ fillMa();
+ const ini=new Date().toISOString().slice(0,8)+"01";if(unsub)unsub();
+ unsub=db.collection("lancamentos").where("data",">=",ini).orderBy("data","desc").limit(60).onSnapshot(s=>{
+  $("lst").innerHTML=s.docs.map(d=>{const l=d.data(),neg=l.tipo=="COST";return`<tr><td>${esc(l.data.slice(8))}/${esc(l.data.slice(5,7))}</td><td>${esc(l.categoria)}<div class="mu">${esc(l.notas||"")}${l.partilhado?" · partilhado "+eur(l.parteOutro??l.valorPartilhado??0):""}</div></td><td class="r ${neg?"neg":"pos"}">${neg?"−":"+"}${eur(l.valor)}</td></tr>`}).join("")||'<tr><td class="mu">Sem lançamentos este mês.</td></tr>'},e=>$("lst").innerHTML='<tr><td class="neg">Erro: '+esc(e.message)+"</td></tr>")}
+async function save(){
+ const valor=+$("val").value,c=cats.find(x=>x.id==$("ca").value),co=contas.find(x=>x.id==$("co").value);
+ if(!(valor>0)){$("msg").textContent="Falta o valor.";return}
+ if(!c){$("msg").textContent="Escolhe a categoria (usa a pesquisa).";return}
+ if(!co){$("msg").textContent="Escolhe a conta.";return}
+ const sh=$("sh").value=="1";let parte=0,pct=0;
+ if(sh){parte=Math.round((+$("se").value||0)*100)/100;pct=+$("sp").value||0;if(!(parte>0)||parte>valor){$("msg").textContent="Partilha inválida.";return}}
+ const tipo=c.tipo=="INCOME"?"INCOME":"COST",uid=auth.currentUser.uid,ref=db.collection("lancamentos").doc(),b=db.batch();
+ b.set(ref,{tipo,categoriaId:c.id,macro:c.macro,micro:c.micro||"",categoria:c.categoria,grupo:c.grupo_custo||"Família",valor,data:$("dta").value,notas:$("nt").value,partilhado:sh,parteOutro:parte,pctOutro:pct,pagoPor:$("pp").value,criadoPor:uid,criadoEm:firebase.firestore.FieldValue.serverTimestamp()});
+ b.set(db.collection("movimentos").doc(),{dono:co.dono,conjunta:!!co.conjunta,contaId:co.id,tipo,valor,data:$("dta").value,lancamentoId:ref.id,criadoPor:uid});
+ b.set(db.collection("preferencias").doc(uid),{uso:{[co.id]:firebase.firestore.FieldValue.increment(1)}},{merge:true});
+ try{await b.commit();prefs.uso=prefs.uso||{};prefs.uso[co.id]=(prefs.uso[co.id]||0)+1;vLanc();$("msg").textContent="Guardado."}catch(e){$("msg").textContent="Erro: "+e.message}}
+function vContas(){
+ const BANCOS=["Santander","BPI","Revolut","Vault","Não é conta bancária"];
+ $("v").innerHTML=`<div class="cd"><b>Contas</b><p class="mu">Ordem por defeito: alfabética. Usa as setas para reordenares (só para ti).</p><table>${sortContas().map((c,i,a)=>`<tr><td>${esc(c.nome)}<div class="mu">${esc(c.banco||"")} · ${esc(c.tipo||"")}${c.conjunta?" · conjunta":""}${c.notas?" · "+esc(c.notas):""}</div></td><td class="r"><button onclick="moveConta('${c.id}',-1)" ${i?"":"disabled"}>↑</button> <button onclick="moveConta('${c.id}',1)" ${i<a.length-1?"":"disabled"}>↓</button></td></tr>`).join("")}</table></div>
+ <div class="cd"><b>Nova conta</b><div class="g"><div><label>Nome da conta</label><input id="cn"></div>
+ <div><label>Banco</label><input id="cb" list="bk" placeholder="escolhe ou escreve"><datalist id="bk">${BANCOS.map(b=>`<option value="${b}">`).join("")}</datalist></div>
+ <div><label>Tipo de conta</label><select id="ct"><option>Corrente</option><option>Poupança</option><option>PPR</option><option>Outros</option></select></div>
+ ${me.k=="admin"?`<div><label>Dono</label><select id="cd"><option value="joao">João</option><option value="rita">Rita</option><option value="kika">Kika (conjunta)</option><option value="familia">Família (conjunta)</option></select></div>`:""}
+ <div><label>Saldo inicial (€)</label><input id="cs" type="number" step="0.01"></div></div>
+ <label>Notas</label><input id="cx"><p><button class="p" onclick="newConta()">Criar conta</button> <span id="msg" class="mu"></span></p>
+ <p class="mu">Saldos e transferências entre contas chegam na próxima fase.</p></div>`}
+async function newConta(){const n=$("cn").value.trim();if(!n){$("msg").textContent="Falta o nome.";return}const dono=me.k=="admin"?$("cd").value:me.k;
+ try{await db.collection("contas").add({nome:n,banco:$("cb").value.trim(),tipo:$("ct").value,notas:$("cx").value.trim(),dono,conjunta:dono=="kika"||dono=="familia",saldoInicial:+$("cs").value||0});await loadContas();vContas()}catch(e){$("msg").textContent="Erro: "+e.message}}
+function vCfg(){
+ const adm=me.k=="admin",opt=a=>uniq(a).map(x=>`<option value="${esc(x)}">`).join("");
+ $("v").innerHTML=`<div class="cd"><b>Categorias</b> <span class="mu">${cats.filter(c=>c.ativa!==false).length} ativas · ${cats.filter(c=>c.ativa===false).length} arquivadas</span>
+ ${adm?'<p><button onclick="imp()">Importar lista inicial (categorias-seed.json)</button> <span id="msg" class="mu"></span></p>':""}</div>
+ <div class="cd"><b>Nova categoria</b><div class="g">
+ <div><label>Tipo</label><select id="nt1"><option value="EXPENSE">Custo</option><option value="INCOME">Receita</option></select></div>
+ <div><label>Macro</label><input id="nm" list="dlm"></div><div><label>Micro (opcional)</label><input id="nmi" list="dlmi"></div>
+ <div><label>Categoria</label><input id="nc"></div>
+ <div><label>Grupo de custo</label><select id="ng"><option>Família</option><option>João</option><option>Rita</option><option>Kika</option></select></div></div>
+ <datalist id="dlm">${opt(cats.map(c=>c.macro))}</datalist><datalist id="dlmi">${opt(cats.map(c=>c.micro))}</datalist>
+ <p><button class="p" onclick="addCat()">Adicionar</button> <span id="msg2" class="mu"></span></p></div>
+ <div class="cd"><b>Editar categorias</b><label>Pesquisar</label><input id="q" oninput="listCats()"><table id="cl"></table></div>`;listCats()}
+function listCats(){const q=($("q").value||"").toLowerCase(),k=c=>c.tipo+c.macro+(c.micro||"")+c.categoria;
+ const all=cats.filter(c=>(c.macro+" "+(c.micro||"")+" "+c.categoria).toLowerCase().includes(q)).sort((x,y)=>k(x).localeCompare(k(y),"pt")),r=all.slice(0,80);
+ $("cl").innerHTML=r.map(c=>`<tr style="${c.ativa===false?"opacity:.5":""}"><td>${esc(c.categoria)}<div class="mu">${esc(c.macro)}${c.micro&&c.micro!=c.macro?" › "+esc(c.micro):""} · ${c.tipo=="INCOME"?"receita":"custo"}</div></td><td><select onchange="upd('${c.id}',{grupo_custo:this.value})">${["Família","João","Rita","Kika"].map(g=>`<option${g==c.grupo_custo?" selected":""}>${g}</option>`).join("")}</select></td><td class="r"><button onclick="renCat('${c.id}')">Renomear</button> <button onclick="arqCat('${c.id}')">${c.ativa===false?"Repor":"Arquivar"}</button></td></tr>`).join("")+(all.length>80?`<tr><td class="mu">A mostrar 80 de ${all.length}. Usa a pesquisa.</td></tr>`:"")}
+async function upd(id,p){try{await db.collection("categorias").doc(id).update(p);Object.assign(cats.find(c=>c.id==id),p);listCats()}catch(e){alert("Erro: "+e.message)}}
+function renCat(id){const c=cats.find(x=>x.id==id),n=prompt("Novo nome da categoria:",c.categoria);if(n&&n.trim())upd(id,{categoria:n.trim().toUpperCase()})}
+function arqCat(id){upd(id,{ativa:cats.find(x=>x.id==id).ativa===false})}
+async function addCat(){const d={tipo:$("nt1").value,macro:$("nm").value.trim().toUpperCase(),micro:$("nmi").value.trim().toUpperCase(),categoria:$("nc").value.trim().toUpperCase(),reporting_group:"",grupo_custo:$("ng").value,ativa:true};
+ if(!d.macro||!d.categoria){$("msg2").textContent="Falta macro ou categoria.";return}
+ if(cats.some(c=>c.tipo==d.tipo&&c.macro==d.macro&&(c.micro||"")==d.micro&&c.categoria==d.categoria)){$("msg2").textContent="Essa categoria já existe.";return}
+ try{const r=await db.collection("categorias").add(d);cats.push({id:r.id,...d});vCfg();$("msg2").textContent="Adicionada."}catch(e){$("msg2").textContent="Erro: "+e.message}}
+async function imp(){if(cats.length&&!confirm("Já existem categorias. Importar de novo duplica-as. Continuar?"))return;
+ try{const rows=await (await fetch("categorias-seed.json")).json(),b=db.batch();rows.forEach((r,i)=>b.set(db.collection("categorias").doc("c"+String(i+1).padStart(3,"0")),r));await b.commit();await loadCats();vCfg();$("msg").textContent=rows.length+" importadas."}catch(e){$("msg").textContent="Erro: "+e.message}}
+</script></body></html>
